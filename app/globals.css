@@ -2,26 +2,157 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  font-family: Impact;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.hero-content {
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80rem /* 1280px */;
+  gap: 3rem /* 16px */;
+  padding: 1rem /* 16px */;
+}
+
+#reactgooglegraph-2 text {
+  fill: white !important;
+}
+
+#reactgooglegraph-1 text {
+  fill: white !important;
+}
+
+#reactgooglegraph-3 text {
+  fill: white !important;
+}
+
+#reactgooglegraph-4 text {
+  fill: white !important;
+}
+
+/*----------------*/
+/*  SCALLOP down  */
+/*----------------*/
+.scallop-down {
+  height: 100px;
+  width: 100%;
+  background: -webkit-gradient(
+    radial,
+    50% 0,
+    10,
+    50% 0,
+    40,
+    from(#1a103c),
+    color-stop(0.49, #1a103c),
+    color-stop(0.51, #fff),
+    to(white)
+  );
+  background-size: 49px 100%;
+  -webkit-background-size: 49px 100%;
+}
+
+/*----------------*/
+/*  SCALLOP up    */
+/*----------------*/
+.scallop-up {
+  height: 100px;
+  width: 100%;
+  background: -webkit-gradient(
+    radial,
+    50% 100%,
+    10,
+    50% 100%,
+    40,
+    from(#369a7e),
+    color-stop(0.49, #369a7e),
+    color-stop(0.51, #fff),
+    to(white)
+  );
+  background-size: 49px 100%;
+  -webkit-background-size: 49px 100%;
+}
+
+.google-visualization-tooltip {
+  display: none !important;
+}
+
+.bgAbout {
+  background-size: 100% 100%;
+  background-position: 0px 0px, 0px 0px, 0px 0px;
+  background-image: radial-gradient(
+      15% 25% at 100% 25%,
+      #256bfd 0%,
+      #07359bff 0%,
+      #1a103cff 97%,
+      #ffffff00 100%
+    ),
+    radial-gradient(
+      15% 25% at 0% 75%,
+      #256bfd 0%,
+      #07359bff 0%,
+      #1a103cff 97%,
+      #ffffff00 100%
+    ),
+    linear-gradient(0deg, #1a103c 100%, #073affff 100%);
+}
+
+.bgDistribution {
+}
+
+@media only screen and (max-width: 600px) {
+  .bgAbout {
+    background: #1a103cff;
+  }
+
+  .bgDistribution {
+    background: #1a103cff;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  border-radius: 15%;
+  text-align: center;
+  font-size: 18px;
+  background: #1b1229;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.swiper {
+  width: 100%;
+  height: 400px;
+  margin: 20px auto;
+}
+.append-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.append-buttons button {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #007aff;
+  color: #007aff;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 0 10px;
+  font-size: 13px;
 }
