@@ -54,6 +54,7 @@ export default function About() {
           }
         } else {
           setQbitAmount("");
+          //commit
         }
       }, 500);
     }
