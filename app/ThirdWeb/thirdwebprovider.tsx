@@ -5,7 +5,7 @@ import {
   coinbaseWallet,
   walletConnect,
 } from "@thirdweb-dev/react";
-import { Mumbai } from "@thirdweb-dev/chains";
+import { Sepolia } from "@thirdweb-dev/chains";
 
 export function ThirdWebProviderWrapper({
   children,
@@ -22,7 +22,7 @@ export function ThirdWebProviderWrapper({
         isDarkMode: true,
       }}
       autoConnect={true}
-      activeChain={Mumbai}
+      activeChain={Sepolia}
       supportedWallets={[metamaskWallet(), coinbaseWallet(), walletConnect()]}
     >
       {children}
