@@ -45,9 +45,11 @@ export default function About() {
 
             setQbitAmount(Number(formattedQBIT).toFixed(2));
           } else {
-            const qbitAmount = await qbitContract.getQBITSaleAmountForUSD(
-              ethers.utils.parseEther(amount)
-            );
+            const amountFormatted = ethers.utils.parseEther(amount);
+
+            const qbitAmount =
+              (Number(amountFormatted) * 10 ** 30) / 118340000000000000;
+
             const formattedQBIT = Number(qbitAmount) / 10 ** 30;
 
             setQbitAmount(Number(formattedQBIT).toFixed(2));
@@ -192,18 +194,34 @@ export default function About() {
                           theme: "dark",
                         });
                       }}
-                      onError={(error: any) =>
-                        toast.error(error.reason, {
-                          position: "top-center",
-                          autoClose: 5000,
-                          hideProgressBar: false,
-                          closeOnClick: true,
-                          pauseOnHover: true,
-                          draggable: true,
-                          progress: undefined,
-                          theme: "dark",
-                        })
-                      }
+                      onError={(error: any) => {
+                        if (
+                          error.reason ==
+                          "missing revert data in call exception; Transaction reverted without a reason string"
+                        ) {
+                          toast.error("Insufficient funds", {
+                            position: "top-center",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "dark",
+                          });
+                        } else {
+                          toast.error(error.reason, {
+                            position: "top-center",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "dark",
+                          });
+                        }
+                      }}
                     >
                       <span>BUY</span>
                     </Web3Button>
