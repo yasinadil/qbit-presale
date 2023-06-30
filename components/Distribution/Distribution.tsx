@@ -35,16 +35,19 @@ export default function Distribution() {
   return (
     <div className="min-h-screen bgDistribution text-white flex justify-center items-center">
       <div>
-        <h1 className="text-2xl md:text-4xl text-center mb-6 md:mb-16 divider">
+        <h1 className="text-2xl md:text-4xl text-center mb-6 md:mb-12 divider">
           Token Distribution
         </h1>
+        <div className="flex justify-center items-center">
+          <div className="w-full md:w-[90vw]">
+            <p className="px-5 text-justify my-14 md:my-28 text-base md:text-2xl">
+              Qbit serves as the quantum cornerstone, seamlessly interwoven
+              within the intricate matrix of the hyper-realm metaverse, powering
+              the very fabric of its digital tapestry.
+            </p>
+          </div>
+        </div>
 
-        <p className="px-10 text-justify my-14 md:my-28 text-base md:text-xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          imperdiet mauris sed ipsum molestie auctor. Cras at nisl velit. Ut
-          commodo malesuada scelerisque. Aliquam finibus nisl et viverra
-          aliquet.
-        </p>
         <div className="flex flex-col md:flex-row">
           {/* <div>
             <h1 className="text-center text-lg md:text-xl">Team Allocation</h1>
