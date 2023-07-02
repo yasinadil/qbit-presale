@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 export default function Roadmap() {
   return (
     <div className="min-h-screen flex flex-col justify-around">
-      <h1 className="text-4xl text-center mb-16 divider">
+      <h1 className="text-4xl text-center mb-16 divider ">
         QBIT&apos;s Roadmap
       </h1>
       <div className="mx-4">
@@ -180,7 +180,8 @@ export default function Roadmap() {
         <div className="w-full md:w-[80vw]">
           <p className="mx-4 text-white text-justify font-medium text-2xl mt-10">
             {" "}
-            Join us on this groundbreaking voyage as we redefine the future of
+            Join us on this groundbreaking voyage as we{" "}
+            <span className="text-[#8E00FE]">redefine</span> the future of
             digital existence and empower you to shape the very fabric of the
             hyper-realm metaverse. Secure your place in history today.
           </p>

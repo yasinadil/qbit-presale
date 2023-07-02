@@ -22,7 +22,11 @@ export function ThirdWebProviderWrapper({
         isDarkMode: true,
       }}
       autoConnect={true}
-      activeChain={Sepolia}
+      activeChain={{
+        ...Sepolia,
+        rpc: [process.env.NEXT_PUBLIC_RPC_URL!], // Override the "rpc" field.
+        // ... Override any other fields you want to customize.
+      }}
       supportedWallets={[metamaskWallet(), coinbaseWallet(), walletConnect()]}
     >
       {children}

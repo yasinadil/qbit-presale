@@ -180,7 +180,8 @@ export default function Roadmap() {
         <div className="w-full md:w-[80vw]">
           <p className="mx-4 text-white text-left font-medium text-base">
             {" "}
-            Join us on this groundbreaking voyage as we redefine the future of
+            Join us on this groundbreaking voyage as we{" "}
+            <span className="text-[#8E00FE]">redefine</span> the future of
             digital existence and empower you to shape the very fabric of the
             hyper-realm metaverse. Secure your place in history today.
           </p>
