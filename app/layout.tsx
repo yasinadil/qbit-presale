@@ -2,6 +2,7 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import { ThirdWebProviderWrapper } from "./ThirdWeb/thirdwebprovider";
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 const poppins = Poppins({
   weight: "400",
@@ -9,8 +10,23 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "QBIT",
-  description: "QBIT Presale",
+  title: "QBIT | Presale Live Now",
+  description:
+    "Qbit serves as the quantum cornerstone, seamlessly interwoven within the intricate matrix of the hyper-realm metaverse, powering the very fabric of its digital tapestry.",
+  siteName: "QBIT",
+  keywords: [
+    "QBIT Ethereum",
+    "Ethereum",
+    "Cryptocurrency",
+    "Trending coins",
+    "QBIT",
+    "QBIT Presale",
+  ],
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 };
 
 export default function RootLayout({
@@ -25,6 +41,7 @@ export default function RootLayout({
           <Navbar />
           {children}
         </ThirdWebProviderWrapper>
+        <Footer />
       </body>
     </html>
   );
