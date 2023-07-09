@@ -5,7 +5,7 @@ import {
   coinbaseWallet,
   walletConnect,
 } from "@thirdweb-dev/react";
-import { Sepolia } from "@thirdweb-dev/chains";
+import { Ethereum } from "@thirdweb-dev/chains";
 
 export function ThirdWebProviderWrapper({
   children,
@@ -23,7 +23,7 @@ export function ThirdWebProviderWrapper({
       }}
       autoConnect={true}
       activeChain={{
-        ...Sepolia,
+        ...Ethereum,
         rpc: [process.env.NEXT_PUBLIC_RPC_URL!], // Override the "rpc" field.
         // ... Override any other fields you want to customize.
       }}

@@ -29,7 +29,7 @@ export default function Distribution() {
 
   const options2 = {
     is3D: true,
-    backgroundColor: "#1a103c",
+    backgroundColor: "transparent",
     colors: ["#2EFFC7", "#FFE56A", "#FF852E", "#FF5FAE", "#772EFF"],
   };
   return (
