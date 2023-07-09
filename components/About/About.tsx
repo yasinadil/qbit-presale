@@ -141,7 +141,7 @@ export default function About() {
                       <div className="join-item">
                         {selectedToken == 0 && (
                           <Image
-                            className="input input-bordered join-item w-full py-1"
+                            className="input input-bordered join-item w-[70px] py-1"
                             src={eth}
                             alt="usdt"
                           />
@@ -149,7 +149,7 @@ export default function About() {
 
                         {selectedToken == 1 && (
                           <Image
-                            className="input input-bordered join-item w-full py-1"
+                            className="input input-bordered join-item w-[70px] py-1"
                             src={usdt}
                             alt="usdt"
                           />
@@ -157,7 +157,7 @@ export default function About() {
 
                         {selectedToken == 2 && (
                           <Image
-                            className="input input-bordered join-item w-full py-1"
+                            className="input input-bordered join-item w-[70px] py-1"
                             src={usdc}
                             alt="usdt"
                           />
@@ -217,7 +217,7 @@ export default function About() {
                       />
                       <div className="join-item">
                         <Image
-                          className="input input-bordered join-item w-full py-1"
+                          className="input input-bordered join-item w-[70px] py-1"
                           src={qbit}
                           alt="usdt"
                         />
