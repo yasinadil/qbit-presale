@@ -5,17 +5,14 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="fixed">
-      {/* <div className="flex items-center justify-between px-10 py-6 "> */}
-      <div className="absolute left-10 top-10">
+    <div className="bgNavbar">
+      <div className="flex items-center justify-between px-10 py-6 fixed top-0 right-0 left-0 glassy z-10 innershad">
         <h1 className="font-bold text-3xl">
           <Link href={"/"}>QBIT</Link>
         </h1>
-      </div>
-      <div className="fixed right-10 top-10">
+
         <ConnectWallet theme="dark" btnTitle="Connect Wallet" />
       </div>
-      {/* </div>{" "} */}
     </div>
   );
 }

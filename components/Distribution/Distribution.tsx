@@ -38,6 +38,7 @@ export default function Distribution() {
         <h1 className="text-2xl md:text-4xl text-center mb-6 md:mb-12 divider ">
           Token Distribution
         </h1>
+
         <div className="flex justify-center items-center">
           <div className="w-full md:w-[90vw]">
             <p className="px-5 text-justify my-14 md:my-28 text-base md:text-2xl ">
